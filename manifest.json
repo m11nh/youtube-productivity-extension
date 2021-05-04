@@ -1,0 +1,9 @@
+{
+    "name": "YouTube productivity extension", 
+    "description": "Extension to help user clean up YouTube webpage to minimize distractions and promote productivity", 
+    "version": "1.0", 
+    "manifest_version": 3, 
+    "action": {
+        
+    }
+}

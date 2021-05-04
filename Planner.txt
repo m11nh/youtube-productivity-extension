@@ -1,0 +1,9 @@
+Plan for youtube productivity extension 
+End User Requirments
+- able to block the following: 
+	- Tabs:
+		- home
+		- explore
+		- subscription
+		- subscriptions
+	- Recommendations
