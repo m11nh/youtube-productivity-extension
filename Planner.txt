@@ -1,4 +1,5 @@
 Plan for youtube productivity extension 
+
 End User Requirments
 - able to block the following: 
 	- Tabs:
@@ -7,3 +8,9 @@ End User Requirments
 		- subscription
 		- subscriptions
 	- Recommendations
+
+Resources
+- https://developer.chrome.com/docs/extensions/mv3
+
+Notes
+- have a look at "content scripts" - changing content of webpage using extension 

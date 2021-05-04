@@ -4,6 +4,12 @@
     "version": "1.0", 
     "manifest_version": 3, 
     "action": {
-        
+        "default_icon": {
+            "16": "images/icon.png", 
+            "24": "images/icon24.png", 
+            "32":"images/icon32.png"
+        }, 
+        "default_title": "click to use change options", 
+        "default_popup": "popup.html"
     }
 }
