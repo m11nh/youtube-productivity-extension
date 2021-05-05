@@ -9,6 +9,10 @@ End User Requirments
 		- subscriptions
 	- Recommendations
 
+Current Action
+- Work on injecting content script onto youtube.com to do something basic
+	- remove a DOM element 
+
 Resources
 - https://developer.chrome.com/docs/extensions/mv3
 
