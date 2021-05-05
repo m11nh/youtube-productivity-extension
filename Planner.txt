@@ -10,8 +10,13 @@ End User Requirments
 	- Recommendations
 
 Current Action
-- Work on injecting content script onto youtube.com to do something basic
-	- remove a DOM element 
+- Figure out how to make settings persist
+	- when I adjust a button, and close the popup, I want the adjustment to be saved and persist if the popup is opened again
+	- if I reload the page, the script should automatically be executed if the setting already says so in the saved logs
+	- resource - https://developer.chrome.com/docs/extensions/reference/storage/
+- figure out what the async part of my code does
+Other Actions
+
 
 Resources
 - https://developer.chrome.com/docs/extensions/mv3
