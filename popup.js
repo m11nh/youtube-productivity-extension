@@ -18,11 +18,9 @@ function removeItems() {
     // Determine if the guide button has been toggled
     let guideButton = document.getElementById("guide-button").querySelector("#button")
     guideButtonPressed = guideButton.getAttribute("aria-pressed")
-    console.log("Hello world!")
     if (guideButtonPressed) {
         // Get the home element to remove
         items = document.getElementById("items").children
-        console.log(items)
         for (i = 0; i < items.length; i++) {
             x = items[i].querySelector('[id="endpoint"]')
             if (x && x.getAttribute("title") == "Home") {
