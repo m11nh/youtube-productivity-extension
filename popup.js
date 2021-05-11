@@ -10,22 +10,8 @@ home_slider.addEventListener("click", async () => {
 });
 
 function removeItems() {
-    let items = document.getElementById("items").querySelector('[aria-label="Home"]')
-    if (items) {
-        items.remove()
-    }
-    // Remove the home icon when the guide button is toggled
-    // Determine if the guide button has been toggled
-    let guideButton = document.getElementById("guide-button").querySelector("#button")
-    guideButtonPressed = guideButton.getAttribute("aria-pressed")
-    if (guideButtonPressed) {
-        // Get the home element to remove
-        items = document.getElementById("items").children
-        for (i = 0; i < items.length; i++) {
-            x = items[i].querySelector('[id="endpoint"]')
-            if (x && x.getAttribute("title") == "Home") {
-                items[i].remove() 
-            }
-        }
-    }
+    let home1 = document.querySelector('ytd-mini-guide-entry-renderer[aria-label="Home"]')
+    let home2 = document.querySelector('a[id="endpoint"][title="Home"]')
+    if (home1) { home1.remove() }
+    if (home2) { home2.remove() }
 }
