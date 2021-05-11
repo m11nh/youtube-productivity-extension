@@ -10,6 +10,7 @@ End User Requirments
 	- Recommendations
 
 Current Action
+- working on getting the "home" title to remove it individually
 - Figure out how to make settings persist
 	- when I adjust a button, and close the popup, I want the adjustment to be saved and persist if the popup is opened again
 	- if I reload the page, the script should automatically be executed if the setting already says so in the saved logs
