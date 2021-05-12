@@ -12,5 +12,11 @@
         "default_title": "click to use change options", 
         "default_popup": "popup.html"
     }, 
-    "permissions": ["scripting", "storage", "activeTab"]
+    "permissions": ["scripting", "storage", "activeTab"], 
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/*"], 
+            "js": ["contentScript.js"]
+        }
+    ]
 }
