@@ -1,5 +1,23 @@
 // update the home depending on what's inside storage
-updateHome()
+// use mutationObserver
+// const targetNode = document.getElementById('items') 
+// const config = { attributes: true, childList: true, subtree: true }
+// const callback = function(mutationsList, observer) {
+//     console.log("observing")
+//     console.log(mutationsList)
+//     for (const mutation in mutationsList) {
+//         if (mutation.type === 'childList') {
+//             console.log('A child node has been added or removed')
+//         }
+//         else if (mutation.type === 'attributes') {
+//             console.log('The ' + mutation.attributeName + ' attribute was modified.')
+//         }
+//     }
+// }
+// const observer = new MutationObserver(callback)
+// observer.observe(targetNode, config)
+
+updateNavigation()
 // inject content script into guide button, that executes whenever button is clicked
 /*
     - get the button
@@ -9,29 +27,34 @@ updateHome()
             - get home_icon_enabled from storage
             - update the icon accordingly 
 */ 
-let guide_button = document.getElementById("guide-button").querySelector('[id="button"]')
-console.log(guide_button)
-guide_button.addEventListener('click', () => {
-    chrome.storage.sync.get(['home_icon_enabled'], (result) => {
-        let home_icon_enabled = result["home_icon_enabled"]
-        let home_icon_2 = document.querySelector('a[id="endpoint"][title="Home"]')
-        if (home_icon_enabled && home_icon_enabled == false) {
-            home_icon_2.style.display = "none"
-        }
-    })
-})
+// let navigation_toggle = document.getElementById("navigation_toggle").querySelector('[id="button"]')
+// guide_button.addEventListener('click', () => {
+//     chrome.storage.sync.get(['navigation_enabled'], (result) => {
+//         let navigation_enabled = result["navigation_enabled"]
+//         let home_icon_2 = document.querySelector('a[id="endpoint"][title="Home"]')
+//         if (navigation_enabled == false) {
+//             home_icon_2.style.display = "none"
+//         }
+//     })
+// })
 
-function updateHome() {
-    let home_icon_1 = document.querySelector('ytd-mini-guide-entry-renderer[aria-label="Home"]')
-    let home_icon_2 = document.querySelector('a[id="endpoint"][title="Home"]')
-    chrome.storage.sync.get(['home_icon_enabled'], (result) => {
-        let home_icon_enabled = result["home_icon_enabled"]
-        if (home_icon_enabled && home_icon_enabled == true) {
-            home_icon_1.style.display = ""
-            home_icon_2.style.display = ""
+function updateNavigation() {
+    let navigation_section_1 = document.querySelector('ytd-mini-guide-renderer')
+    let navigation_section_2 = document.querySelector('div[id="contentContainer"]')
+    let navigation_button = document.querySelector('yt-icon-button[id="guide-button"]')
+    let recommended_content = document.querySelector('ytd-browse')
+    chrome.storage.sync.get(['navigation_enabled'], (result) => {
+        let navigation_enabled = result["navigation_enabled"]
+        if (navigation_enabled == true) {
+            navigation_section_1.style.display = ""
+            navigation_section_2.style.display = ""
+            navigation_button.style.display = ""
+            recommended_content.style.display = ""
         } else {
-            home_icon_1.style.display = "none"
-            home_icon_2.style.display = "none"
+            navigation_section_1.style.display = "none"
+            navigation_section_2.style.display = "none"
+            navigation_button.style.display = "none"
+            recommended_content.style.display = "none"
         }
     })
 }

@@ -1,21 +1,15 @@
 Plan for youtube productivity extension 
 
 End User Requirments
-- able to block the following: 
-	- Tabs:
-		- home
-		- explore
-		- subscription
-		- subscriptions
-	- Recommendations
+// options
+1- block distractions
+	- block the side navigation bar and all home recommended videos
+	- all side recommended videos
+	- all comments
 
 Current Action
-- working on getting the "home" title to remove it individually
-- Figure out how to make settings persist
-	- when I adjust a button, and close the popup, I want the adjustment to be saved and persist if the popup is opened again
-	- if I reload the page, the script should automatically be executed if the setting already says so in the saved logs
-	- resource - https://developer.chrome.com/docs/extensions/reference/storage/
-- figure out what the async part of my code does
+- refactor code a little 
+- see if my code works across tabs
 Other Actions
 
 
