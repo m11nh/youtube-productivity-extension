@@ -1,17 +1,22 @@
 {
-    "name": "YouTube productivity extension", 
+    "name": "Youtube Distraction Remover", 
     "description": "Minimize distractions when using youtube by choosing what content you would like enabled", 
     "version": "1.0", 
     "manifest_version": 3, 
     "action": {
         "default_icon": {
             "16": "images/icon.png", 
-            "24": "images/icon24.png", 
-            "32":"images/icon32.png"
+            "24": "images/icon.png", 
+            "32":"images/icon.png"
         }, 
         "default_title": "click to use change options", 
         "default_popup": "popup.html"
     }, 
+    "icons": {
+        "16": "images/icon.png", 
+        "48": "images/icon.png", 
+        "128": "images/icon.png"
+    },
     "permissions": ["scripting", "storage", "activeTab"], 
     "content_scripts": [
         {
