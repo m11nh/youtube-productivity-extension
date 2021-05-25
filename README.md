@@ -2,7 +2,7 @@
 Google chrome extension that cleans up the YouTube page to remove distractions and boost productivity. 
 
 # How to install
-method 1 - Unpacked version 
+Unpacked version 
 1. Download this repo
 2. Head to chrome://extensions on your chrome browser
 3. Click on load unpacked, and choose downloaded folder
